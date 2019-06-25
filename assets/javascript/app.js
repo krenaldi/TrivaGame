@@ -92,3 +92,68 @@ let questions = [
         answer: "League of Extraordinary Gentlemen was written by Alan Moore and stars characters like Allan Quatermain, Captain Nemo, Dr. Jekyll/Mr. Hyde, and the Invisible Man fighting to stop a war between Fu Manchu and Professor Moriarty and prevent an invasion from the aliens from H.G. Wells War of the Worlds."
     }
 ];
+
+// GLOBAL VARIABLES
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+let correctScore = 0;
+let incorrectScore = 0;
+let unansweredScore = 0;
+let timer;
+let count = 0;
+const questionTime = 15; // 15 seconds
+const gaugeWidth = 150; // 150px
+const gaugeUnit = gaugeWidth / questionTime;
+
+
+// FUNCTIONS
+
+function renderQuestion() {
+    let q = questions[runningQuestion];
+    let questionDiv = $("<div id='question'>").text(q.question);
+    let choicesList = $("<ol>");
+    let choice1 = $("<li class='choiceA' id='A'>").text(q.choiceA);
+    let choice2 = $("<li class='choiceB' id='B'>").text(q.choiceB);
+    let choice3 = $("<li class='choiceC' id='C'>").text(q.choiceC);
+    let choice4 = $("<li class='choiceD' id='D'>").text(q.choiceD);
+    questionDiv.append(choicesList, choice1, choice2, choice3, choice4);
+}
+
+function renderCounter() {
+    if(count <= questionTime){
+        renderCounter.innerHTML = count;
+        timeGauge.style.width = count * gaugeUnit + "px";
+        count++
+    }else {
+        count=0;
+    }
+}
+
+function startQuiz() {
+    $("#start").hide();
+    renderQuestion();
+    renderCounter();
+    timer = setInterval(renderCounter, 1000);
+    console.log(renderQuestion);
+}
+
+function checkAnswer(answer){
+    if (answer == questions[runningQuestion].correct){
+        correctScore++;
+        console.log(correctScore);
+    }else if(count = 0){
+        unansweredScore++;
+        console.log(unansweredScore);
+    } else {
+        incorrectScore++;
+        console.log(incorrectScore);
+    }
+}
+
+function scoreRender(){
+    let scoreDiv = $("<div id='score'>");
+    let correctAnswer = $("<h3>Correct Answers: " + correctScore + "</h3");
+    let incorrectAnswer = $("<h3>Incorrect Answers: " + incorrectScore + "</h3");
+    let unAnswer = $("<h3>Unanswered Questions: " + unansweredScore + "</h3");
+    scoreDiv.append(correctAnswer, incorrectAnswer, unAnswer);
+}
