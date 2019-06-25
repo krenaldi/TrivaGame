@@ -13,15 +13,17 @@
 
 <body>
     <div class="container">
-        <div id="start">Start Quiz</div>
+        <div id="start"><button type="button" class="btn btn-dark btn-lg">Start Quiz</button></div>
         <div id="quiz">
             <div id="question">
-                <div class="choice" id="A"></div>
-                <div class="choice" id="B"></div>
-                <div class="choice" id="C"></div>
-                <div class="choice" id="D"></div>
+                <p class="choice" id="A"></p>
+                <p class="choice" id="B"></p>
+                <p class="choice" id="C"></p>
+                <p class="choice" id="D"></p>
             </div>
-            <div id="choices"></div>
+            <!-- Will appear after answer is selected -->
+            <div id="answer"></div>
+            
             <div id="timer">
                 <div id="counter"></div>
                 <div id="btimeGauge"></div>
