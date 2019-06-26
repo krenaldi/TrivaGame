@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -13,29 +14,17 @@
 
 <body>
     <div class="container">
-        <div id="start"><button type="button" class="btn btn-dark btn-lg">Start Quiz</button></div>
-        <!-- Appears once start button is pressed -->
-        <div id="quiz">
-            <!-- <div id="question">
-                <ol>
-                    <li class="choiceA" id="A"></li>
-                    <li class="choiceB" id="B"></li>
-                    <li class="choiceC" id="C"></li>
-                    <li class="choiceD" id="D"></li>
-                </ol>
+        <div class="main">
+            <h1>super superhero comics quiz!</h1>
+            <div id="start"><button type="button" class="btn btn-dark btn-lg">Start Quiz</button></div>
+            <!-- Appears once start button is pressed -->
+            <div id="quiz">
 
-            </div> -->
-            <!-- Will appear after answer is selected -->
-            <div id="answer"></div>
-
-            <div id="timer">
-                <div id="counter"></div>
-                <div id="btimeGauge"></div>
-                <div id="timeGauge"></div>
+                <div id="answer"></div>
+                <div id="score"></div>
             </div>
-            <div id="progress"></div>
+            
         </div>
-        <div id="score"></div>
     </div>
 
     <script src="assets/javascript/app.js"></script>
