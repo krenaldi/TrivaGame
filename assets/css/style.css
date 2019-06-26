@@ -22,6 +22,11 @@ ol {
     margin-bottom: 25px;
     background-color: #ffffff;
     border: 2px solid #dddddd;
+    padding-top: 25px;
+}
+#start,
+#quiz {
+    margin-top: 50px;
 }
 #timer{
     position: relative;
