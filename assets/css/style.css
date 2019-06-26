@@ -1,3 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/worn_dots.png");
+    background-color: lightblue;
+}
+
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 1px 1px 2px #000000;
+}
+
 ol {
     list-style-type: upper-alpha;
   }
+
+.main {
+    width: 960px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+}
+#timer{
+    position: relative;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
