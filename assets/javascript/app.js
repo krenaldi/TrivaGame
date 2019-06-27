@@ -202,14 +202,20 @@ $(document).ready(function() {
         $("#quiz").append($("<h3 id='score'>Incorrect Answers: " + incorrectScore + "</h3>"));
         $("#quiz").append($("<h3 id='score'>Unanswered Questions: " + unansweredScore + "</h3>"));
         $("#quiz").append($("<p><button type='button' class='btn btn-dark btn-lg' id='restart'>Restart Quiz</button></p>"));
-        //restartQuiz();
     }
 
-    // Click Event to start the game
+    // Click Event to start the quiz
     $("#start").click(startQuiz);
 
     // Click event to restart the quiz
-    $("#restart").click(restartQuiz);
+    $("#restart").on("click", (function() {
+        $("#quiz").empty();
+        questionCounter = 0;
+        correctScore = 0;
+        incorrectScore = 0;
+        unansweredScore = 0;
+        startQuiz();
+    }));
 
     // Click event triggered on the right or wrong answer
     $("#quiz").on("click", ".choices", (function() {
