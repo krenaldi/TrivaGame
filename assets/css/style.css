@@ -11,42 +11,35 @@ h1 {
     text-shadow: 1px 1px 2px #000000;
 }
 
-ol {
-    list-style-type: upper-alpha;
-  }
+ul {
+    align-items: center;
+    align-content: center;
+}
 
+.choices {
+    border: 2px solid  #dddddd;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.choices:hover {
+    border: 2px solid  #000000;
+}
+.container {
+    text-align: center;
+}
 .main {
     width: 960px;
+    height: 650px;
     text-align: center;
     margin-top: 35px;
     margin-bottom: 25px;
     background-color: #ffffff;
     border: 2px solid #dddddd;
-    padding-top: 25px;
+    padding: 25px;
 }
 #start,
 #quiz {
     margin-top: 50px;
-}
-#timer{
-    position: relative;
-    height : 100px;
-    width : 200px;
-    bottom : 0px;
-    text-align: center;
-}
-
-#btimeGauge{
-    width : 150px;
-    height : 10px;
-    border-radius: 10px;
-    background-color: lightgray;
-    margin-left : 25px;
-}
-#timeGauge{
-    height : 10px;
-    border-radius: 10px;
-    background-color: mediumseagreen;
-    margin-top : -10px;
-    margin-left : 25px;
 }
