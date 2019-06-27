@@ -184,16 +184,11 @@ $(document).ready(function() {
 
     // Function that restarts the game and resets all counters to 0
     function restartQuiz() {
-        $("#quiz").empty();
+        $("#quiz").html($("<button type='button' class='btn btn-dark btn-lg' id='start'>Start Quiz</button>"));
         questionCounter = 0;
         correctScore = 0;
         incorrectScore = 0;
         unansweredScore = 0;
-        startQuiz();
-        //alert(Restarted);
-        console.log("Correct Answers: " + correctScore);
-        console.log("Incorrect Answers: " + incorrectScore);
-        console.log("Unanswered Questions: " + unansweredScore);
     }
 
     function scoreRender() {
@@ -204,17 +199,17 @@ $(document).ready(function() {
         $("#quiz").append($("<p><button type='button' class='btn btn-dark btn-lg' id='restart'>Restart Quiz</button></p>"));
     }
 
-    // Click Event to start the quiz
-    $("#start").click(startQuiz);
-
-    // Click event to restart the quiz
-    $("#restart").on("click", (function() {
-        $("#quiz").empty();
-        questionCounter = 0;
-        correctScore = 0;
-        incorrectScore = 0;
-        unansweredScore = 0;
+    // Click Event to start the quiz. Need to add 2nd parameter for id since dynamically created button
+    //$("#start").click(startQuiz);
+    $("body").on("click", "#start",  (function() {
+        // console.log("clicked");
         startQuiz();
+    }));
+
+    // Click event to restart the quiz. Need to add 2nd parameter for id since dynamically created button
+    $("body").on("click", "#restart",  (function() {
+        // console.log("clicked");
+        restartQuiz();
     }));
 
     // Click event triggered on the right or wrong answer
