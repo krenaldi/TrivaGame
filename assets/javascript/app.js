@@ -128,7 +128,7 @@ $(document).ready(function() {
         else {
             scoreRender();
         }
-        console.log(questionCounter);
+        //console.log(questionCounter);
         //console.log(questions[questionCounter].correctAnswer);
     }
 
@@ -136,26 +136,26 @@ $(document).ready(function() {
     function userWins() {
         $("#quiz").html("<h3>Correct!</h3>");
         correctScore++;
-        console.log(correctScore);
+        //console.log(correctScore);
         let answer = questions[questionCounter].answer;
         let image = questions[questionCounter].image;
         $("#quiz").append("<p>" + answer + "</p>" + image);
         setTimeout(nextQuestion, 3000);
         questionCounter++;
-        console.log(questionCounter);
+        //console.log(questionCounter);
     }
 
     // Function that triggers when the user gets the answer wrong
     function userLoss() {
         $("#quiz").html("<h3>Nope!</h3>");
         incorrectScore++;
-        console.log(incorrectScore);
+        //console.log(incorrectScore);
         let answer = questions[questionCounter].answer;
         let image = questions[questionCounter].image;
         $("#quiz").append("<p>" + answer + "</p>" + image);
         setTimeout(nextQuestion, 3000);
         questionCounter++;
-        console.log(questionCounter);
+        //console.log(questionCounter);
     }
 
     // Function that triggers when the user times out
@@ -163,13 +163,13 @@ $(document).ready(function() {
         if (time === 0) {
             $("#quiz").html("<h3>You ran out of time!</h3>");
             unansweredScore++;
-            console.log(unansweredScore);
+            //console.log(unansweredScore);
             let answer = questions[questionCounter].answer;
             let image = questions[questionCounter].image;
             $("#quiz").append("<p>" + answer + "</p>" + image);
             setTimeout(nextQuestion, 3000);
             questionCounter++;
-            console.log(questionCounter);
+            //console.log(questionCounter);
         }
     }
 
@@ -198,9 +198,9 @@ $(document).ready(function() {
 
     function scoreRender() {
         $("#quiz").empty();
-        $("#quiz").append($("<h3>Correct Answers: " + correctScore + "</h3>"));
-        $("#quiz").append($("<h3>Incorrect Answers: " + incorrectScore + "</h3>"));
-        $("#quiz").append($("<h3>Unanswered Questions: " + unansweredScore + "</h3>"));
+        $("#quiz").append($("<h3 id='score'>Correct Answers: " + correctScore + "</h3>"));
+        $("#quiz").append($("<h3 id='score'>Incorrect Answers: " + incorrectScore + "</h3>"));
+        $("#quiz").append($("<h3 id='score'>Unanswered Questions: " + unansweredScore + "</h3>"));
         $("#quiz").append($("<p><button type='button' class='btn btn-dark btn-lg' id='restart'>Restart Quiz</button></p>"));
         //restartQuiz();
     }
