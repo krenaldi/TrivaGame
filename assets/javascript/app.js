@@ -140,7 +140,7 @@ $(document).ready(function() {
         let answer = questions[questionCounter].answer;
         let image = questions[questionCounter].image;
         $("#quiz").append("<p>" + answer + "</p>" + image);
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 6000);
         questionCounter++;
         //console.log(questionCounter);
     }
@@ -153,7 +153,7 @@ $(document).ready(function() {
         let answer = questions[questionCounter].answer;
         let image = questions[questionCounter].image;
         $("#quiz").append("<p>" + answer + "</p>" + image);
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 6000);
         questionCounter++;
         //console.log(questionCounter);
     }
@@ -167,7 +167,7 @@ $(document).ready(function() {
             let answer = questions[questionCounter].answer;
             let image = questions[questionCounter].image;
             $("#quiz").append("<p>" + answer + "</p>" + image);
-            setTimeout(nextQuestion, 3000);
+            setTimeout(nextQuestion, 6000);
             questionCounter++;
             //console.log(questionCounter);
         }
