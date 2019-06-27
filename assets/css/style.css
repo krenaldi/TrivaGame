@@ -11,6 +11,10 @@ h1 {
     text-shadow: 1px 1px 2px #000000;
 }
 
+h3 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 14px;
+}
 ul {
     align-items: center;
     align-content: center;
@@ -40,6 +44,7 @@ ul {
     padding: 25px;
 }
 #start,
+#restart,
 #quiz {
     margin-top: 50px;
 }
