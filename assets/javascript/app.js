@@ -7,7 +7,7 @@ $(document).ready(function() {
             question: "Which famous Marvel character made his first appearance in Amazing Fantasy #15 in 1962?",
             choices: ["The Human Torch", "Spider-Man", "Thor", "Professor X"],
             correctAnswer: "Spider-Man",
-            answer: "<b>Spider-Man</b> made his first appearance in Amazing Fantasy #15 back in the summer of 1962. The Amazing Fantasy book was cancelled after that issue but the sales for that single issue were so great that the Marvel publisher agreed to print The Amazing Spider-Man the following year.",
+            answer: "<b>Spider-Man</b> made his first appearance in Amazing Fantasy #15 back in the summer of 1962. The Amazing Fantasy book was cancelled after that issue but the sales for that single issue were so great that Marvel  agreed to print The Amazing Spider-Man the following year.",
             image: "<img src='assets/images/Spider-Man.png'>"
         },
         {
@@ -35,7 +35,7 @@ $(document).ready(function() {
             question: "Speedy is the sidekick of which DC character?",
             choices: ["Batman", "The Flash", "Superman", "Green Arrow"],
             correctAnswer: "Green Arrow",
-            answer: "Despite the name, Speedy (aka Roy Harper) is actually the sidekick of <b>Green Arrow</b> while the Flash's sidekick is actually Kid Flash. The confusing naming convention was actually a punchline in the first episode ot the animated series Young Justice where both Speedy and Kid Flash appeared together.",
+            answer: "Despite the name, Speedy (aka Roy Harper) is actually the sidekick of <b>Green Arrow</b> while the Flash's sidekick is actually Kid Flash. The confusing naming convention was actually a punchline in the first episode of the animated series Young Justice starring both Speedy and Kid Flash.",
             image: "<img src='assets/images/Speedy_Harper.jpg'>"
         },
         {
@@ -70,7 +70,7 @@ $(document).ready(function() {
             question: "Which graphic novel has characters from classic science fiction and horror novels from the 1800's team up to save the world?",
             choices: ["From Hell", "League of Extraordinary Gentlemen", "V for Vendetta", "Saga"],
             correctAnswer: "League of Extraordinary Gentlemen",
-            answer: "<b>The League of Extraordinary Gentlemen</b> was written by Alan Moore and stars characters like Allan Quatermain, Captain Nemo, Dr. Jekyll & Mr. Hyde, and the Invisible Man fighting to stop a war between Fu Manchu and Professor Moriarty and prevent an invasion from the aliens from H.G. Wells' War of the Worlds.",
+            answer: "<b>The League of Extraordinary Gentlemen</b> was written by Alan Moore and stars characters like Allan Quatermain, Captain Nemo, Dr. Jekyll & Mr. Hyde, and the Invisible Man fighting to stop a war between Fu Manchu and Professor Moriarty.",
             image: "<img src='assets/images/League_of_Extraordinary_Gentlemen.jpg'>"
         }
     ];
